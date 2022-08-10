@@ -12,19 +12,21 @@ by Robert Lipshitz and Sucharit Sarkar
 
 
 
--Install Sage. (Visit http://www.sagemath.org/)
+- Install Sage. (Visit http://www.sagemath.org/)
 
--Open a Sage terminal, go to the directory where you have downloaded all
+- Open a Sage terminal, go to the directory where you have downloaded all
 the files of KhovanovSteenrodSquare.
 
--Update runKhovanovSteenrodSquare.sage with the link of interest, defined either 
+- Update runKhovanovSteenrodSquare.sage with the link of interest, defined either 
 via PD code or DT code as a list of lists. See the notes below on defining the link. 
 Specify the particular Steenrod square  that we want to compute. To do this for 
 the map sq^i: H^(p,q) -> H^(p+i,q), we  would use the inputs: i, p, q.
 
--Compute sq^i for this link by running
+- Compute sq^i for this link by running
     > sage runKhovanovSteenrodSquare.sage
 from the Sage terminal.
+
+- The output gets saved to output.sage.
 
 
 Notes on defining the link:
