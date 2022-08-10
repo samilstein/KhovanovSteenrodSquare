@@ -31,3 +31,4 @@ Notes on defining the link:
 - The indexing for the PD code or DT code must start with a 1, not a 0.
 - To determine the PD code for a link diagram, follow the instructions here: https://knotinfo.math.indiana.edu/descriptions/pd_notation.html .
 - The way that the Sage documentation describes the PD code is NOT correct. Do not follow that.
+- Because we rely on some of Lipshitz and Sarkar's function, which do not work for links with unknot components or Hopf link components, this repo does not work with links with either of those as components either.
