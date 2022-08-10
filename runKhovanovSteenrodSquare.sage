@@ -6,23 +6,21 @@ from datetime import datetime
 writing = open(outp,'w')
 
 print(f"Starting at {datetime.now()}")
-# knot1b = [[3, 1, 4, 6], [1, 5, 2, 4], [5, 3, 6, 2]]
-# knot2b = [[elem + max(flatten(knot1b)) for elem in lst] for lst in knot1b]
-# knot3b = [[elem + max(flatten(knot2b)) for elem in lst] for lst in knot1b]
-# knot4b = [[elem + max(flatten(knot3b)) for elem in lst] for lst in knot1b]
 
+# Step 0: Manually specify the inputs.
+link = [[1,2,4,3],[3,4,6,5],[5,6,2,1]] #This is the PD code or DT code for the oriented link of interest.
+input_format = "PD_code" #This must be either PD_code or DT_code.
+i = 1 #index of the Steenrod square to compute
+p = -3 #cohomological degree of the domain of sq^i
+q = -7 #quantum degree of the domain and range of sq^i
 
-# compute_khovanov_complex(knot1b+knot2b+knot3b+knot4b, "PD_code", mirror_image = False)
-compute_khovanov_complex([[1,2,4,3],[3,4,6,5],[5,6,2,1]], "PD_code")
+# Step 1: Set up the Khovanov complex
+compute_khovanov_complex(link, input_format)
 
-# The inputs of compute_sqi are (i,p,q), where i is the index of the sq^i map, 
-# p is the cohomology degree of the domain Khovanov homology group, and q is the quantum degree for this group.
-sqi=KhovanovComplex.compute_sqi(1,-3,-7)
+# Step 2: Compute sq^i : H^(p,q)(link; Z/2) -> H^(p+i,q)(link; Z/2)
+sqi=KhovanovComplex.compute_sqi(i,p,q)
+
 print(f"Ending at {datetime.now()}")
-writing.write('\n sq1: H^(-3.-7)(4 trefoils) -> H^(-2,-7) = '+repr(sqi)+'\n')
+writing.write('\n sq1: H^(-3.-7)(trefoil) -> H^(-2,-7) = '+repr(sqi)+'\n')
 writing.flush()
-
-
 writing.close()
-
-#2022-07-19 21:44:17
