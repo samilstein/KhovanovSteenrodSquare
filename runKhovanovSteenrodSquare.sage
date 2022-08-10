@@ -8,7 +8,7 @@ writing = open(outp,'w')
 print(f"Starting at {datetime.now()}")
 
 # Step 0: Manually specify the inputs.
-link = [[1,2,4,3],[3,4,6,5],[5,6,2,1]] #This is the PD code or DT code for the oriented link of interest.
+link = [[1,2,4,3],[3,4,6,5],[5,6,2,1]] #This is the PD code or DT code for the oriented link of interest (currently the left-handed trefoil).
 input_format = "PD_code" #This must be either PD_code or DT_code.
 i = 1 #index of the Steenrod square to compute
 p = -3 #cohomological degree of the domain of sq^i
