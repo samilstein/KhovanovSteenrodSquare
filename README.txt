@@ -1,5 +1,10 @@
 This is the README file for the KhovanovSteenrodSquare program.
 
+The other files in this repo are:
+- KhovanovSteenrodSquare.sage: This files holds the code that is used to compute sq^i.
+- runKhovanovSteenrodSquare.sage: This file is called from the command line to run the code in KhovanovSteenrodSquare.sage.
+- output.sage: When running runKhovanovSteenrodSquare.sage, the output will automatically be saved to this file.
+
 **********************************
 
 Here is a step by step guideline on using this code to compute the desired 
